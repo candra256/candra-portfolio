@@ -34,3 +34,113 @@ section{
 .img-galery{
      width: 100%;
 }
+
+
+
+
+
+/* myComputer section */
+.boxKomputer{
+     position: relative;
+     background-color:#212529;
+     border-radius: 10px;
+     height: 500px;
+     transform-style: preserve-3d;
+     
+}
+
+.boxKomputer h4{
+     color: #e3f2fe;
+
+}
+
+
+.boxKomputer::before{
+     content: 'My';
+     position: absolute;
+     color: #fff;
+     font-size: 6em;
+     font-weight: bold;
+     font-style: italic;
+     top: 30px;
+     left: 50%;
+     transform: translate(-50%,0);
+     transition: 0.5s;
+     opacity: 0;
+}
+
+.boxKomputer:hover::before{
+     opacity: 0.5;
+
+}
+
+
+.boxKomputer::after{
+     content: 'Komputer';
+     position: absolute;
+     color: #fff;
+     font-size: 4.5em;
+     font-weight: bold;
+     font-style: italic;
+     top: 350px;
+     left: 50%;
+     transform: translate(-50%,0);
+     transition: 0.5s;
+     opacity: 0;
+}
+
+
+.boxKomputer:hover::after{
+    
+     opacity: 0.5;
+
+}
+
+.Komputer1{
+     position: absolute;
+     top: 0;
+     width: 100%;
+     text-align: center;
+     font-size: 2em;
+     opacity: 0;
+     transform: translate3d(0, 0, 50px);
+     transition: 0.5;
+    
+}
+
+.boxKomputer:hover .Komputer1{
+     top: 20px;
+     opacity: 1;
+     
+}
+
+.detail{
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translate3d(-50%,0,80px);
+     opacity: 0;
+     transition: 0.5s;
+     
+}
+
+.boxKomputer:hover .detail{
+     opacity: 1;
+     bottom: 25px;
+}
+
+
+
+.K-image{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate3d(-50%, -46%, 100px);
+     max-width: 350px;
+     z-index: 10;
+     transition: 0.5s;
+}
+
+.boxKomputer:hover .K-image{
+     transform: translate3d(-50%, -46%, 100px) rotate(3deg) scale(1.4);
+}

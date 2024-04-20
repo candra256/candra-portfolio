@@ -149,65 +149,97 @@
         <div class="row">
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/1.jpg" alt="img1" class="img-galery">
+              <img src="/galery/1.jpg" alt="img1" class="img-galery" />
             </a>
           </div>
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/12.jpg" alt="img1"  class="img-galery">
+              <img src="/galery/12.jpg" alt="img1" class="img-galery" />
             </a>
           </div>
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/2.jpg" alt="img2"  class="img-galery">
+              <img src="/galery/2.jpg" alt="img2" class="img-galery" />
             </a>
           </div>
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/4.jpg" alt="img1"  class="img-galery">
+              <img src="/galery/4.jpg" alt="img1" class="img-galery" />
             </a>
           </div>
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/6.jpg" alt="img1"  class="img-galery">
+              <img src="/galery/6.jpg" alt="img1" class="img-galery" />
             </a>
           </div>
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/2.jpg" alt="img1"  class="img-galery">
+              <img src="/galery/2.jpg" alt="img1" class="img-galery" />
             </a>
           </div>
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/7.jpg" alt="img1"  class="img-galery">
+              <img src="/galery/7.jpg" alt="img1" class="img-galery" />
             </a>
           </div>
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/9.jpg" alt="img1"  class="img-galery">
+              <img src="/galery/9.jpg" alt="img1" class="img-galery" />
             </a>
           </div>
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/10.jpg" alt="img1"  class="img-galery">
+              <img src="/galery/10.jpg" alt="img1" class="img-galery" />
             </a>
           </div>
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/12.jpg" alt="img1"  class="img-galery">
+              <img src="/galery/12.jpg" alt="img1" class="img-galery" />
             </a>
           </div>
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/1.jpg" alt="img1"  class="img-galery">
+              <img src="/galery/1.jpg" alt="img1" class="img-galery" />
             </a>
           </div>
           <div class="col-md-3">
             <a href="#">
-              <img src="/galery/4.jpg" alt="img1"  class="img-galery">
+              <img src="/galery/4.jpg" alt="img1" class="img-galery" />
             </a>
           </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="myComputer">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>KomputerKu</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="boxKomputer">
+              <h4 class="Komputer1">DragonK</h4>
+              <img src="/img/c1.png" alt="ko1" class="K-image" />
+              <a href="#" class="btn btn-light detail">Show Detail</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="boxKomputer">
+              <h4 class="Komputer1">GalaksiK</h4>
+              <img src="/img/c3.png" alt="ko1" class="K-image" />
+              <a href="#" class="btn btn-light detail">Show Detail</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="boxKomputer">
+              <h4 class="Komputer1">WaterK</h4>
+              <img src="/img/c2.png" alt="ko1" class="K-image" />
+              <a href="#" class="btn btn-light detail">Show Detail</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -251,6 +283,7 @@
           </div>
         </div>
       </div>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#212529"
@@ -271,9 +304,9 @@
     <!-- aos animation -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      const galeryImage = document.querySelectorAll('.img-galery');
-      galeryImage.forEach((img, i)=>{
-        img.dataset.aos= 'fade-down';
+      const galeryImage = document.querySelectorAll(".img-galery");
+      galeryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
       });
       AOS.init({
         once: false,
@@ -283,7 +316,7 @@
     <!-- GSAP animation -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script>
-      gsap.from('.jumbotron img',{duration:1, y:-100, opacity:0 ,ease:'bounce'});
+      gsap.from(".jumbotron img", { duration: 1, y: -100, opacity: 0, ease: "bounce" });
     </script>
 
     <!-- js ku -->
@@ -314,6 +347,18 @@
           })
           .catch((error) => console.error("Error!", error.message));
       });
+    </script>
+
+    <!-- tils js -->
+    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".boxKomputer"), {
+        max: 35,
+        speed: 600,
+        scale:1.1,
+        glare:true,
+      });
+
     </script>
   </body>
 </html>
